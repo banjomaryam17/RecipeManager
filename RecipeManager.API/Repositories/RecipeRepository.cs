@@ -46,8 +46,7 @@ public class RecipeRepository : IRecipeRepository
         var recipe = await _context.Recipes.FindAsync(id);
         if (recipe != null)
         {
-            _context.Recipes.Remove(recipe);
-            await _context.SaveChangesAsync();
+            _context.Recipes.Remove(recipe);await _context.SaveChangesAsync();
         }
     }
 }
